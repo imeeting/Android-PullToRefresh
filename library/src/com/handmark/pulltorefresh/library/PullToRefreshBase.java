@@ -93,16 +93,19 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout {
 
 	public PullToRefreshBase(Context context) {
 		super(context);
+		Log.d("imeeting", "PullToRefreshBase 1");
 		init(context, null);
 	}
 
 	public PullToRefreshBase(Context context, AttributeSet attrs) {
 		super(context, attrs);
+		Log.d("imeeting", "PullToRefreshBase 2");
 		init(context, attrs);
 	}
 
 	public PullToRefreshBase(Context context, Mode mode) {
 		super(context);
+		Log.d("imeeting", "PullToRefreshBase 3");
 		mMode = mode;
 		init(context, null);
 	}
@@ -895,7 +898,6 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout {
 		if (p == null) {
 			p = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 		}
-
 		int childWidthSpec = ViewGroup.getChildMeasureSpec(0, 0, p.width);
 		int lpHeight = p.height;
 		int childHeightSpec;
